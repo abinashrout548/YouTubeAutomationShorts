@@ -1,0 +1,49 @@
+YouTube Shorts Daily Auto-Sync
+==============================
+Developed by  : Abinash Rout
+All Rights Reserved (c) Abinash Rout
+
+FIRST TIME SETUP (required once):
+-----------------------------------
+1. Go to https://console.cloud.google.com
+2. Create a project
+3. Enable "YouTube Data API v3"
+4. Go to Credentials → Create OAuth 2.0 Client ID (Desktop App)
+5. Download the JSON file
+6. Rename it to:  client_secrets.json
+7. Place client_secrets.json in THIS folder (same folder as the .exe)
+8. Go to OAuth consent screen → Test Users → add your Gmail
+
+ADD SOURCE CHANNELS:
+---------------------
+Open source_channels.txt and add one YouTube channel per line:
+
+    https://www.youtube.com/@ChannelHandle
+    https://www.youtube.com/@AnotherChannel
+
+HOW TO RUN:
+-----------
+Double-click:  YouTubeShortsSync.exe
+
+Or run from terminal:
+    YouTubeShortsSync.exe
+
+WHAT IT DOES:
+-------------
+- Reads all channels from source_channels.txt
+- Finds all Shorts uploaded TODAY from each channel
+- Downloads and re-uploads them to YOUR YouTube channel
+- Skips already-synced videos automatically (synced_videos.json)
+
+FILES IN THIS FOLDER:
+---------------------
+YouTubeShortsSync.exe   ← Main program
+client_secrets.json     ← YOU add this (Google API credentials)
+source_channels.txt     ← List of source channels to monitor
+token.json              ← Auto-created after first login (do not delete)
+synced_videos.json      ← Auto-created, tracks uploaded videos
+
+SHARING WITH OTHERS:
+--------------------
+Share the entire YouTubeShortsSync_Bundle folder.
+Each person must add their OWN client_secrets.json from their Google account.

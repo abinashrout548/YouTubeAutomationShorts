@@ -1,0 +1,21 @@
+# Google API credentials — NEVER upload these
+client_secrets.json
+token.json
+
+# Sync log (personal data)
+synced_videos.json
+
+# PyInstaller build artifacts
+build/
+dist/
+*.spec
+version_info.txt
+__pycache__/
+*.pyc
+
+# Temp files
+tmp/
+*.tmp
+
+# VS Code
+.vscode/
